@@ -1,4 +1,13 @@
-#topbar {
-    height: 30px;
-    background: linear-gradient(to right, #75ac03, yellowgreen);
+.topbar {
+    background-color: black;
+}
+
+.topbar .uk-navbar-container {
+    background-color: black;
+}
+
+.topbar * {
+    height: 30px!important;
+    line-height: 30px;
+    color: white;
 }

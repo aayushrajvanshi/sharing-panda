@@ -52,7 +52,7 @@ module.exports = {
                 use: cssConfig
             },
             {
-                test: /\.jsx$/,
+                test: /\.(js|jsx)$/,
                 use: [{
                     loader: 'babel-loader'
                 }],

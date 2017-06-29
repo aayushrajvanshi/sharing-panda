@@ -3,7 +3,6 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
-var favicon = require('serve-favicon');
 
 app.use(bodyParser.urlencoded({
     extended: false

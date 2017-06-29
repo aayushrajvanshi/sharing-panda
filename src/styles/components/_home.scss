@@ -1,0 +1,200 @@
+.uk-slideshow {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.uk-slideshow>li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.uk-slideshow>.uk-active {
+    z-index: 10;
+    opacity: 1;
+}
+
+.uk-slideshow>li>img {
+    visibility: hidden;
+}
+
+[data-uk-slideshow-slide] {
+    cursor: pointer;
+}
+
+.uk-slideshow-fullscreen,
+.uk-slideshow-fullscreen>li {
+    height: 100vh;
+}
+
+.uk-slideshow-fade-in {
+    -webkit-animation: uk-fade 0.5s linear;
+    animation: uk-fade 0.5s linear;
+}
+
+.uk-slideshow-fade-out {
+    -webkit-animation: uk-fade 0.5s linear reverse;
+    animation: uk-fade 0.5s linear reverse;
+}
+
+.uk-slidenav {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: rgba(50, 50, 50, 0.4);
+    font-size: 60px;
+    text-align: center;
+}
+
+.uk-slidenav:hover,
+.uk-slidenav:focus {
+    outline: none;
+    text-decoration: none;
+    color: rgba(50, 50, 50, 0.7);
+    cursor: pointer;
+}
+
+.uk-slidenav:active {
+    color: rgba(50, 50, 50, 0.9);
+}
+
+.uk-slidenav-previous:before {
+    content: "\f104";
+    font-family: FontAwesome;
+}
+
+.uk-slidenav-next:before {
+    content: "\f105";
+    font-family: FontAwesome;
+}
+
+.uk-slidenav-position {
+    position: relative;
+}
+
+.uk-slidenav-position .uk-slidenav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    margin-top: -30px;
+}
+
+.uk-slidenav-position:hover .uk-slidenav {
+    display: block;
+}
+
+.uk-slidenav-position .uk-slidenav-previous {
+    left: 20px;
+}
+
+.uk-slidenav-position .uk-slidenav-next {
+    right: 20px;
+}
+
+.uk-slidenav-contrast {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.uk-slidenav-contrast:hover,
+.uk-slidenav-contrast:focus {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.uk-slidenav-contrast:active {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.uk-dotnav {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-top: -15px;
+    padding: 20px;
+    list-style: none;
+}
+
+.uk-dotnav>* {
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+    padding-left: 15px;
+    margin-top: 15px;
+}
+
+.uk-dotnav:before,
+.uk-dotnav:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+}
+
+.uk-dotnav:after {
+    clear: both;
+}
+
+.uk-dotnav>* {
+    float: left;
+}
+
+.uk-dotnav>*>* {
+    display: block;
+    box-sizing: content-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(50, 50, 50, 0.1);
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.uk-dotnav>*> :hover,
+.uk-dotnav>*> :focus {
+    background: rgba(50, 50, 50, 0.4);
+    outline: none;
+}
+
+.uk-dotnav>*> :active {
+    background: rgba(50, 50, 50, 0.6);
+}
+
+.uk-dotnav>.uk-active>* {
+    background: rgba(50, 50, 50, 0.4);
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.uk-dotnav-contrast>*>* {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.uk-dotnav-contrast>*> :hover,
+.uk-dotnav-contrast>*> :focus {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.uk-dotnav-contrast>*> :active {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.uk-dotnav-contrast>.uk-active>* {
+    background: rgba(255, 255, 255, 0.9);
+}

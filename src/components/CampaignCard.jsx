@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import img1 from '../images/img5.jpg';
 
 class CampaignCard extends Component {
     constructor(props) {
@@ -10,7 +11,8 @@ class CampaignCard extends Component {
         return (
             <div className="campaign-card">
                 <div className="card-image">
-                    <img src="http://lorempixel.com/280/280/" alt="" />
+                    <div className="uk-background-cover uk-height-medium" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                    </div>
                     <div className="category">
                         <span>Wildlife Conservation</span>
                     </div>

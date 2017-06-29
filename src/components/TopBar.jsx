@@ -3,20 +3,25 @@ import React, { Component } from 'react';
 class TopBar extends Component {
     render() {
         return (
-            <div id="topbar">
+            <header className="topbar">
                 <div className="uk-container">
-                    <div className="uk-float-left">
-                        <div className="uk-h6 uk-margin-remove" style={{ 'padding-top': '5px', 'color': 'white' }}>Call Us Now: +91 9997064005</div>
-                    </div>
-                    <div className="uk-float-right">
-                        <a href="#" className="uk-icon-link uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: facebook"></a>
-                        <a href="#" className="uk-icon-link uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: twitter"></a>
-                        <a href="#" className="uk-icon-link uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: instagram"></a>
-                        <a href="#" className="uk-icon-link uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: google-plus"></a>
-                        <a href="#" className="uk-icon-link uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: youtube"></a>
-                    </div>
+                    <nav className="uk-navbar-container" data-uk-navbar>
+                        <div className="uk-navbar-left">
+                            <ul className="uk-navbar-nav">
+                                <li><a href="#">Call us : +91 9997064005</a></li>
+                            </ul>
+                        </div>
+                        <div className="uk-navbar-right">
+                            <ul className="uk-navbar-nav">
+                                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i className="fa fa-google"></i></a></li>
+                                <li><a href="#"><i className="fa fa-whatsapp"></i></a></li>
+                            </ul>
+                        </div>
+                    </nav>
                 </div>
-            </div>
+            </header>
         );
     }
 }
