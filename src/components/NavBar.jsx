@@ -1,64 +1,160 @@
 import React, { Component } from 'react';
 import * as Redux from 'react-redux';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as actions from './../actions/actions.jsx';
-import logo from './../images/logo.png';
+import logo from './../images/sharing-panda-logo.svg';
+import Login from './Login.jsx';
 
 class NavBar extends Component {
     constructor(props) {
         super(props);
-        this.onLogin = this.onLogin.bind(this);
+        this.onLogout = this.onLogout.bind(this);
     }
-    onLogin() {
+    onLogout() {
         var { dispatch } = this.props;
-        dispatch(actions.startLogin());
+        dispatch(actions.startLogout());
     }
     render() {
-        return (
-            <header className="navbar" data-uk-sticky="cls-active:uk-sticky-active">
-                <nav className="uk-navbar-container uk-visible@m" data-uk-navbar>
-                    <div className="uk-navbar-left">
-                        <ul className="uk-navbar-nav">
-                            <li className="uk-margin-left uk-padding-small"><img src={logo} height="10%" alt="Logo" /></li>
-                        </ul>
-                    </div>
-                    <div className="uk-navbar-center">
-                        <ul className="uk-navbar-nav">
-                            <li><a href="#">Browse Fundraisers</a></li>
-                            <li><a href="#">Start a Fundraiser</a></li>
-                            <li><a href="#">How it Works</a></li>
-                        </ul>
-                    </div>
-                    <div className="uk-navbar-right">
-                        <ul className="uk-navbar-nav">
-                            <li ><button className="uk-button uk-button-secondary" onClick={this.onLogin}>Log In</button></li>
-                        </ul>
-                    </div>
-                </nav>
-                <nav className="uk-navbar-container uk-hidden@m" data-uk-navbar>
-                    <div className="uk-navbar-left">
-                        <ul className="uk-navbar-nav">
-                            <li className="uk-margin-left uk-padding-small"><img src={logo} height="10%" alt="Logo" /></li>
-                        </ul>
-                    </div>
-                    <div className="uk-offcanvas-content">
-                        <span style={{ 'position': 'absolute', 'right': '10px', 'cursor': 'pointer' }} data-uk-toggle="target: #offcanvas-usage"><i className="fa fa-bars" style={{ 'font-size': '30px' }} aria-hidden="true"></i></span>
-                        <div id="offcanvas-usage" data-uk-offcanvas="mode: slide">
-                            <div className="uk-offcanvas-bar" style={{ 'background-color': '#34495e' }}>
-                                <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                                    <li><a href="#">Browse Fundraisers</a></li>
-                                    <li className="uk-nav-divider"></li>
-                                    <li><a href="#">Start a Fundraiser</a></li>
-                                    <li className="uk-nav-divider"></li>
-                                    <li><a href="#">How it Works</a></li>
-                                </ul>
-                            </div>
-
+        var buttons = () => {
+            if (!this.props.auth.uid) {
+                return (<li>
+                    <button id="login" className="uk-button uk-button-primary uk-margin-small-right" data-uk-toggle="target: #login-modal">Log In</button>
+                    <button id="signup" className="uk-button uk-button-primary uk-margin-small-right" data-uk-toggle="target: #signup-modal">Sign Up</button>
+                </li>
+                );
+            } else return (
+                <li>
+                    <div className="user-info">
+                        <p className="user-greeting">Hi, {this.props.auth.display_name}</p>
+                        <div className="user-icon">
+                            <img src={this.props.auth.photo_url} alt="" />
+                        </div>
+                        <div data-uk-dropdown="pos: bottom-right; delay-hide: 400">
+                            <ul className="uk-nav uk-dropdown-nav">
+                                <li><NavLink to='/profile'>View Profile</NavLink></li>
+                                <li><NavLink to='/profile'>Edit Profile</NavLink></li>
+                                <li className="uk-nav-divider"></li>
+                                <li><a href="#" onClick={this.onLogout}>Log Out</a></li>
+                            </ul>
                         </div>
                     </div>
-                </nav>
-            </header>
+                </li>
+            );
+        }
+        return (
+            <nav className="uk-navbar-container" style={{ 'background-color': 'white', 'height': '80px' }} data-uk-navbar data-uk-sticky="cls-active: uk-box-shadow-medium animation: uk-animation-slide-top">
+                <div className="uk-navbar-left uk-margin-left uk-visible@m">
+                    <ul className="uk-navbar-nav">
+                        <li >
+                            <div className="uk-light">
+                                <Link to="/">
+                                    <a className="uk-logo">
+                                        <img src={logo} width="180" height="50" alt="" data-uk-svg />
+                                    </a>
+                                </Link>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="uk-navbar-center uk-visible@m">
+                    <ul className="uk-navbar-nav">
+                        <li><NavLink activeStyle={{
+                            color: 'red'
+                        }} to="/explore-campaigns">Explore Fundraisers</NavLink></li>
+                        <li><NavLink activeStyle={{
+                            color: 'red'
+                        }} to="/start-campaign">Start Your Fundraisers</NavLink></li>
+                        <li><NavLink activeStyle={{
+                            color: 'red'
+                        }} to="/how-it-works">How it Works</NavLink></li>
+                    </ul>
+                </div>
+                <div className="uk-navbar-center uk-hidden@m">
+                    <ul className="uk-navbar-nav">
+                        <li >
+                            <div className="uk-light">
+                                <Link to="/">
+                                    <a className="uk-logo" href="#">
+                                        <img src={logo} width="180" height="50" alt="" data-uk-svg />
+                                    </a>
+                                </Link>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div className="uk-navbar-right uk-margin-right uk-visible@m">
+                    <ul className="uk-navbar-nav">
+                        <li>
+                            {buttons()}
+                        </li>
+                    </ul>
+                </div>
+                <div className="uk-navbar-right uk-margin-right uk-hidden@m">
+                    <ul className="uk-navbar-nav">
+                        <li>
+                            <span data-uk-toggle="target: #side-nav-bar" data-uk-icon="icon: menu; ratio: 2"></span>
+                        </li>
+                    </ul>
+                </div>
+                <Login />
+
+                <div className="uk-hidden@m" id="side-nav-bar" data-uk-offcanvas="mode: slide; overlay: true">
+                    <div className="uk-offcanvas-bar uk-background-primary uk-flex uk-flex-column uk-text-center">
+                        <button className="uk-offcanvas-close uk-close-large" type="button" data-uk-close></button>
+                        <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" data-uk-nav>
+                            <li><NavLink activeClassName="uk-active" to="/explore-campaigns">Explore Fundraisers</NavLink></li>
+                            <li><NavLink activeClassName="uk-active" to="/start-campaign">Start Your Fundraisers</NavLink></li>
+                            <li><NavLink activeClassName="uk-active" to="/how-it-works">How it Works</NavLink></li>
+                        </ul>
+                        <div className="uk-clearfix">
+                            <div className="uk-grid-small uk-flex-inline">
+                                <div className="uk-float-left">
+                                    <a data-uk-toggle="target: #login-modal">Log In</a>
+                                </div>
+                                <div className="uk-float-right">
+                                    <a data-uk-toggle="target: #signup-modal">Sign Up</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="uk-margin-top">
+                            <div className="uk-grid-small uk-child-width-auto uk-flex-inline" data-uk-grid>
+                                <div>
+                                    <a className="uk-icon-button" href="#" data-uk-icon="icon: facebook"></a>
+                                </div>
+                                <div>
+                                    <a className="uk-icon-button" href="#" data-uk-icon="icon: twitter"></a>
+                                </div>
+                                <div>
+                                    <a className="uk-icon-button" href="#" data-uk-icon="icon: mail"></a>
+                                </div>
+                                <div>
+                                    <a className="uk-icon-button" href="#" data-uk-icon="icon: receiver"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="uk-margin-top">
+                            <div className="uk-grid-small uk-child-width-auto uk-flex-inline" data-uk-grid>
+                                <div className="uk-light">
+                                    <a className="uk-logo" href="">
+                                        <img src={logo} style={{ 'filter': 'invert(100%)' }} width="180" height="50" alt="" data-uk-svg />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
         );
     };
 }
 
-export default Redux.connect()(NavBar);
+const mapStateToProps = state => {
+    return {
+        auth: state.auth
+    }
+}
+
+export default Redux.connect(
+    mapStateToProps
+)(NavBar);

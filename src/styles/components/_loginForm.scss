@@ -1,0 +1,44 @@
+#login-modal .uk-modal-dialog {
+    display: block;
+    margin: 20px;
+    max-width: 400px;
+}
+
+#login-modal .uk-form-controls {
+    position: relative;
+}
+
+#google-button {
+    background-color: #d34836;
+}
+
+#facebook-button {
+    background-color: #3b5998;
+}
+
+#signup-modal .uk-modal-dialog {
+    display: block;
+    margin: 20px;
+    max-width: 400px;
+}
+
+@media only screen and (max-width :767px) {
+    #login-modal .uk-modal-dialog {
+        padding: 0px;
+        max-height: 80vh;
+        max-width: 90vw;
+        overflow-y: auto;
+    }
+    #login-modal .uk-modal-body {
+        padding: 20px;
+    }
+    #signup-modal .uk-modal-dialog {
+        padding: 0px;
+        max-height: 80vh;
+        max-width: 90vw;
+        overflow-y: auto;
+    }
+    #signup-modal .uk-modal-body {
+        padding: 20px;
+    }
+}

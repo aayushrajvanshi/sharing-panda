@@ -1,15 +1,22 @@
 import * as redux from 'redux';
 var thunk = require('redux-thunk').default;
-import { searchReducer, todoReducer, mapReducer } from './../reducers/index.jsx';
+import { createLogger } from 'redux-logger';
+const logger = createLogger();
+
+import { searchReducer, todoReducer, mapReducer, authReducer, fundraiserReducer, userReducer, fetchFundraiserReducer } from './../reducers/reducers.jsx';
 export var configure = () => {
-    var reducer = redux.combineReducers({
+    const reducer = redux.combineReducers({
         searchText: searchReducer,
         todos: todoReducer,
-        map: mapReducer
+        map: mapReducer,
+        auth: authReducer,
+        users: userReducer,
+        fundraisers: fundraiserReducer,
+        fetchfundraisers: fetchFundraiserReducer
     });
 
-    var store = redux.createStore(reducer, redux.compose(
-        redux.applyMiddleware(thunk),
+    const store = redux.createStore(reducer, redux.compose(
+        redux.applyMiddleware(thunk, logger),
         window.devToolsExtension ? window.devToolsExtension() : f => f
     ));
     return store;

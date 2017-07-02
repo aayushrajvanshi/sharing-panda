@@ -1,0 +1,37 @@
+{
+    "fundraisers": {
+        "1": {
+            "title": "Empowering India's Grassroots Conservationists",
+            "type": "Wildlife Conservation",
+            "campaigner": "Cara Tejpal",
+            "description": "Support 'mud-on-the-boots' conservationists working to protect India's vanishing wildlife!",
+            "start_date": "",
+            "end_date": "",
+            "days_left": "41",
+            "goal_amount": "10,00,000",
+            "supporters": 121
+        },
+        "2": {
+            "title": "Design Education for Rural Artisans",
+            "type": "Education",
+            "campaigner": "India Kala",
+            "description": "To empower rural artisans by investing in their design education and providing them with the ",
+            "start_date": "",
+            "end_date": "",
+            "days_left": "21",
+            "goal_amount": "Manish Vyas",
+            "supporters": 323
+        },
+        "3": {
+            "title": "Help Sikkim Himalayan Academy",
+            "type": "Education",
+            "campaigner": "Manish Vyas",
+            "description": "Because of Sikkim Himalayan Academy, kids in Buriakhop not only dream, but achieve them. Will you ",
+            "start_date": "",
+            "end_date": "",
+            "days_left": "32",
+            "goal_amount": "10,00,000",
+            "supporters": 41
+        }
+    }
+}

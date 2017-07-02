@@ -1,19 +1,21 @@
 import React, { Component, PropTypes } from 'react';
 import img1 from '../images/img5.jpg';
 
-class CampaignCard extends Component {
+class CampaignCardCopy extends Component {
     constructor(props) {
         super(props);
 
     }
+
     render() {
+        var { title, type, campaigner, description, days_left, goal_amount, supporters } = this.props;
         return (
             <div className="campaign-card">
                 <div className="card-image">
                     <div className="uk-background-cover uk-height-medium" style={{ 'background-image': 'url(' + img1 + ')' }}>
                     </div>
                     <div className="category">
-                        <span>Wildlife Conservation</span>
+                        <span>{type}</span>
                     </div>
                 </div>
                 <div className="social">
@@ -21,10 +23,10 @@ class CampaignCard extends Component {
                     <span><i className="fa fa-whatsapp"></i></span>
                 </div>
                 <div className="campaign-info">
-                    <p>Empowering India's Grassroots Conservationists</p>
+                    <p>{title}</p>
                     <span>by</span>
-                    <span>Cara Tejpal</span>
-                    <p>Support 'mud-on-the-boots' conservationists working to protect India's vanishing wildlife!</p>
+                    <span>{campaigner}</span>
+                    <p>{description}</p>
                 </div>
                 <div className="campaign-progress">
                     <span>
@@ -39,17 +41,17 @@ class CampaignCard extends Component {
                 <div className="campaign-status">
                     <div className="goal">
                         <i className="fa fa-inr"></i>
-                        <span>10,00,000</span>
+                        <span>{goal_amount}</span>
                         <p>goal</p>
                     </div>
                     <div className="supporter">
                         <i className="fa fa-heart"></i>
                         <span>145</span>
-                        <p>supporters</p>
+                        <p>{supporters}</p>
                     </div>
                     <div className="days">
                         <i className="fa fa-clock-o"></i>
-                        <span>26</span>
+                        <span>{days_left}</span>
                         <p>days left</p>
                     </div>
 
@@ -59,8 +61,8 @@ class CampaignCard extends Component {
     }
 }
 
-CampaignCard.propTypes = {
+CampaignCardCopy.propTypes = {
 
 };
 
-export default CampaignCard;
+export default CampaignCardCopy;
