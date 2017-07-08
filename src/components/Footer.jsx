@@ -54,8 +54,8 @@ class Footer extends Component {
                             <div className="footer-list uk-width-1-5@m">
                                 <p>Support</p>
                                 <ul className="other-list">
-                                    <li><NavLink to="/support">FAQs</NavLink></li>
-                                    <li><NavLink to="/support">Fundraising Tips</NavLink></li>
+                                    <li><NavLink to="/faq">FAQs</NavLink></li>
+                                    <li><NavLink to="/fundraising-tips">Fundraising Tips</NavLink></li>
                                     <li><a href="#">Fundraiser Video</a></li>
                                     <li><a href="#">Project Handbook</a></li>
                                     <li><a href="#">Plans & Pricing</a></li>

@@ -1,26 +1,4 @@
-import axios from 'axios';
 import firebase, { database, googleProvider, facebookProvider } from './../firebase/';
-
-export var changeSearchText = (text) => {
-    return {
-        type: 'CHANGE_SEARCH_TEXT',
-        text
-    };
-};
-
-export var addTodo = (text) => {
-    return {
-        type: 'ADD_TODO',
-        text
-    };
-};
-
-export var removeTodo = (id) => {
-    return {
-        type: 'REMOVE_TODO',
-        id
-    };
-};
 
 export var startLocationFetch = () => {
     return {
@@ -146,33 +124,36 @@ export var startAddFundraiser = (title, type, campaigner, description, days_left
 
         return fundraiserRef.then(() => {
             dispatch(addFundraiser({
-                ...fundraiser,
-                id: fundraiserRef.key
+                id: fundraiserRef.key,
+                ...fundraiser
             }));
         });
     };
 };
 
-export var startFundraiserFetch = () => {
-    return {
-        type: 'START_FUNDRAISER_FETCH'
-    };
-};
 
-export var completeFundraiserFetch = (fundraisers) => {
+export var addFundraisers = (fundraisers) => {
     return {
-        type: 'COMPLETE_FUNDRAISER_FETCH',
+        type: 'ADD_FUNDRAISERS',
         fundraisers
     };
 };
 
-export var fetchFundraisers = () => {
+export var startAddFundraisers = () => {
     return (dispatch, getState) => {
-        dispatch(startFundraiserFetch());
-        var fundraiserRef = database.child('fundraisers');
-        fundraiserRef.once('value').then((snapshot) => {
-            console.log(snapshot.val());
-            dispatch(completeFundraiserFetch(snapshot.val()));
+        var fundraisersRef = database.child('fundraisers');
+
+        return fundraisersRef.once('value').then((snapshot) => {
+            var fundraisers = snapshot.val() || {};
+            var parsedFundraisers = [];
+            Object.keys(fundraisers).forEach((fundraiserId) => {
+                parsedFundraisers.push({
+                    id: fundraiserId,
+                    ...fundraisers[fundraiserId]
+                });
+            });
+            dispatch(addFundraisers(parsedFundraisers));
         });
+
     };
-};
+}

@@ -42,8 +42,33 @@ class NavBar extends Component {
                 </li>
             );
         }
+        var sideButtons = () => {
+            if (!this.props.auth.uid) {
+                return (
+                    <div className="uk-clearfix">
+                        <div className="uk-grid-small uk-flex-inline">
+                            <div className="uk-float-left">
+                                <a data-uk-toggle="target: #login-modal">Log In</a>
+                            </div>
+                            <div className="uk-float-right">
+                                <a data-uk-toggle="target: #signup-modal">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                );
+            } else return (
+                <div>
+                    <div>
+                        <p className="user-greeting uk-margin-small-bottom">Hi, {this.props.auth.display_name}</p>
+                    </div>
+                    <div className="user-icon uk-margin-small-bottom" style={{ 'width': '80px', 'height': '80px' }}>
+                        <img src={this.props.auth.photo_url} alt="" />
+                    </div>
+                </div>
+            );
+        }
         return (
-            <nav className="uk-navbar-container" style={{ 'background-color': 'white', 'height': '80px' }} data-uk-navbar data-uk-sticky="cls-active: uk-box-shadow-medium animation: uk-animation-slide-top">
+            <nav className="uk-navbar-container uk-box-shadow-medium" style={{ 'background-color': 'white', 'height': '80px' }} data-uk-navbar data-uk-sticky>
                 <div className="uk-navbar-left uk-margin-left uk-visible@m">
                     <ul className="uk-navbar-nav">
                         <li >
@@ -107,16 +132,7 @@ class NavBar extends Component {
                             <li><NavLink activeClassName="uk-active" to="/start-campaign">Start Your Fundraisers</NavLink></li>
                             <li><NavLink activeClassName="uk-active" to="/how-it-works">How it Works</NavLink></li>
                         </ul>
-                        <div className="uk-clearfix">
-                            <div className="uk-grid-small uk-flex-inline">
-                                <div className="uk-float-left">
-                                    <a data-uk-toggle="target: #login-modal">Log In</a>
-                                </div>
-                                <div className="uk-float-right">
-                                    <a data-uk-toggle="target: #signup-modal">Sign Up</a>
-                                </div>
-                            </div>
-                        </div>
+                        {sideButtons()}
                         <div className="uk-margin-top">
                             <div className="uk-grid-small uk-child-width-auto uk-flex-inline" data-uk-grid>
                                 <div>

@@ -66,31 +66,12 @@ export var fundraiserReducer = (state = [], action) => {
                 ...state,
                 action.fundraiser
             ];
+        case 'ADD_FUNDRAISERS':
+            return action.fundraisers;
         default:
             return state;
     }
 };
-
-export var fetchFundraiserReducer = (state = {
-    'isFetching': false,
-    'fundraisers': []
-}, action) => {
-    switch (action.type) {
-        case 'START_FUNDRAISER_FETCH':
-            return {
-                isFetching: true,
-                fundraisers: []
-            };
-        case 'COMPLETE_FUNDRAISER_FETCH':
-            return {
-                isFetching: false,
-                fundraisers: action.fundraisers
-            };
-        default:
-            return state;
-    }
-};
-
 export var authReducer = (state = {}, action) => {
     switch (action.type) {
         case 'LOGIN':

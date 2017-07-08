@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import firebase from './firebase/';
 
@@ -22,7 +23,10 @@ import UserProfile from './components/UserProfile.jsx';
 import ExploreCampaigns from './components/ExploreCampaigns.jsx';
 import StartCampaign from './components/StartCampaign.jsx';
 import HowItWorks from './components/HowItWorks.jsx';
-import Support from './components/Support.jsx';
+import FAQ from './components/FAQ.jsx';
+import FundraisingTips from './components/FundraisingTips.jsx';
+import ScrollToTop from './components/ScrollToTop.jsx';
+import CampaignDetail from './components/CampaignDetail.jsx';
 
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
@@ -34,24 +38,34 @@ firebase.auth().onAuthStateChanged(function (user) {
     }
 });
 
-store.dispatch(actions.startAddFundraiser("Empowering India's Grassroots Conservationists", "Wildlife Conservation", "Cara Tejpal", "Support 'mud-on-the-boots' conservationists working to protect India's vanishing wildlife!", "21", "10,00,000", "212"));
+store.dispatch(actions.startAddFundraisers());
 
 const supportsHistory = 'pushState' in window.history;
 
 ReactDOM.render(
     <Provider store={store}>
         <BrowserRouter forceRefresh={!supportsHistory}>
-            <div >
-                <Route path="/" component={NavBar} />
-                <Route exact path="/" component={Home} />
-                <Route path="/login" component={Login} />
-                <Route path="/profile" component={UserProfile} />
-                <Route path="/explore-campaigns" component={ExploreCampaigns} />
-                <Route path="/start-campaign" component={StartCampaign} />
-                <Route path="/how-it-works" component={HowItWorks} />
-                <Route path="/support" component={Support} />
-                <Route path="/" component={Footer} />
-            </div>
+            <ScrollToTop>
+                <Route render={({ location }) => (
+                    <CSSTransitionGroup
+                        transitionName="fade"
+                        transitionEnterTimeout={3000}
+                        transitionLeaveTimeout={3000}
+                    >
+                        <Route path="/" component={NavBar} />
+                        <Route exact path="/" component={Home} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/profile" component={UserProfile} />
+                        <Route path="/explore-campaigns" component={ExploreCampaigns} />
+                        <Route path="/start-campaign" component={StartCampaign} />
+                        <Route path="/how-it-works" component={HowItWorks} />
+                        <Route path="/faq" component={FAQ} />
+                        <Route path="/fundraising-tips" component={FundraisingTips} />
+                        <Route path="/campaign-detail" component={CampaignDetail} />
+                        <Route path="/" component={Footer} />
+                    </CSSTransitionGroup>
+                )} />
+            </ScrollToTop>
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

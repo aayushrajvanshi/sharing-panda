@@ -9,12 +9,6 @@ class Support extends Component {
                         FAQs
                 </div>
                 </div>
-
-                <div id="tips" className="uk-section uk-section-muted" style={{ 'height': '2000px' }}>
-                    <div className="uk-container">
-                        Tips
-                </div>
-                </div>
             </div>
         );
     }
