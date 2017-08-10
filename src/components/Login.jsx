@@ -59,10 +59,10 @@ export class Login extends Component {
                                 </div>
                                 <div className="uk-clearfix">
                                     <div className="uk-float-left">
-                                        <label style={{ 'font-size': '0.7rem' }}>Forgot Details?</label>
+                                        <label style={{ 'fontSize': '0.7rem' }}>Forgot Details?</label>
                                     </div>
                                     <div className="uk-float-right">
-                                        <label style={{ 'font-size': '0.7rem' }}><input className="uk-checkbox" type="checkbox" /> Remember me</label>
+                                        <label style={{ 'fontSize': '0.7rem' }}><input className="uk-checkbox" type="checkbox" /> Remember me</label>
                                     </div>
                                 </div>
                                 <hr className="uk-divider-icon" />
@@ -78,7 +78,7 @@ export class Login extends Component {
                                         <button id="facebook-button" type="button" className="uk-hidden@s uk-button uk-button-large uk-button-primary uk-width-1-1" onClick={this.onFacebookLogin}> <span className="uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: facebook"></span>Facebook</button>
                                     </div>
                                 </div>
-                                <p style={{ 'font-size': '0.7rem', 'margin-bottom': '0px' }}>I don't have an account yet. <span className="uk-link" style={{ 'font-size': '0.7rem', 'margin-bottom': '0px' }} data-uk-toggle="target: #signup-modal">Sign Up</span> </p>
+                                <p style={{ 'fontSize': '0.7rem', 'marginBottom': '0px' }}>I don't have an account yet. <span className="uk-link" style={{ 'fontSize': '0.7rem', 'marginBottom': '0px' }} data-uk-toggle="target: #signup-modal">Sign Up</span> </p>
                             </form>
                         </div>
                     </div>
@@ -128,7 +128,7 @@ export class Login extends Component {
                                         <button id="facebook-button" className="uk-button uk-button-large uk-button-primary uk-width-1-1"> <span className="uk-margin-small-right" style={{ 'color': 'white' }} data-uk-icon="icon: facebook"></span>Facebook</button>
                                     </div>
                                 </div>
-                                <p style={{ 'font-size': '0.7rem', 'margin-bottom': '0px' }}>Already have an account? <span className="uk-link" style={{ 'font-size': '0.7rem', 'margin-bottom': '0px' }} data-uk-toggle="target: #login-modal">Sign In</span> </p>
+                                <p style={{ 'fontSize': '0.7rem', 'marginBottom': '0px' }}>Already have an account? <span className="uk-link" style={{ 'fontSize': '0.7rem', 'marginBottom': '0px' }} data-uk-toggle="target: #login-modal">Sign In</span> </p>
                             </form>
                         </div>
                     </div>

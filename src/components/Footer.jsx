@@ -67,7 +67,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="uk-section uk-section-primary uk-margin-remove uk-padding" style={{ 'background-color': 'rgba(0,0,0,1)' }}>
+                <div className="uk-section uk-section-primary uk-margin-remove uk-padding" style={{ 'backgroundColor': 'rgba(0,0,0,1)' }}>
                     <div className="uk-container">
                         <div className="uk-light">
                             <a className="uk-logo" href="">
@@ -77,7 +77,7 @@ class Footer extends Component {
                         <div className="uk-clearfix">
                             <div className="uk-grid-small uk-flex-inline">
                                 <div className="uk-float-left">
-                                    <p className="uk-text-center" style={{ 'font-size': '0.7rem' }}>Terms of Use | Privacy Policy | 2017 | All Rights Reserved</p>
+                                    <p className="uk-text-center" style={{ 'fontSize': '0.7rem' }}>Terms of Use | Privacy Policy | 2017 | All Rights Reserved</p>
                                 </div>
                             </div>
                         </div>

@@ -10,11 +10,9 @@ const FundraiserContainer = (props) => {
     var totalFundraisers = fundraisers.length;
     return (
         <FundraisersList totalFundraisers={totalFundraisers}>
-            {fundraisers.map(fundraiser =>
-                <Fundraiser
-                    key={fundraiser.id}
-                    {...fundraiser} />
-            )}
+            {fundraisers.map((fundraiser, index) => {
+                return <Fundraiser key={index} {...fundraiser} />
+            })}
         </FundraisersList>
     );
 }

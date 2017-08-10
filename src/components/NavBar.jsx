@@ -32,10 +32,16 @@ class NavBar extends Component {
                         </div>
                         <div data-uk-dropdown="pos: bottom-right; delay-hide: 400">
                             <ul className="uk-nav uk-dropdown-nav">
-                                <li><NavLink to='/profile'>View Profile</NavLink></li>
-                                <li><NavLink to='/profile'>Edit Profile</NavLink></li>
+                                <li>
+                                    <NavLink to='/profile'>View Profile</NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/profile'>Edit Profile</NavLink>
+                                </li>
                                 <li className="uk-nav-divider"></li>
-                                <li><a href="#" onClick={this.onLogout}>Log Out</a></li>
+                                <li>
+                                    <a href="#" onClick={this.onLogout}>Log Out</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -68,15 +74,13 @@ class NavBar extends Component {
             );
         }
         return (
-            <nav className="uk-navbar-container uk-box-shadow-medium" style={{ 'background-color': 'white', 'height': '80px' }} data-uk-navbar data-uk-sticky>
+            <nav className="uk-navbar-container uk-box-shadow-medium" style={{ 'backgroundColor': 'white', 'height': '80px' }} data-uk-navbar data-uk-sticky>
                 <div className="uk-navbar-left uk-margin-left uk-visible@m">
                     <ul className="uk-navbar-nav">
                         <li >
                             <div className="uk-light">
-                                <Link to="/">
-                                    <a className="uk-logo">
-                                        <img src={logo} width="180" height="50" alt="" data-uk-svg />
-                                    </a>
+                                <Link className="uk-logo" to="/">
+                                    <img src={logo} width="180" height="50" alt="" data-uk-svg />
                                 </Link>
                             </div>
                         </li>
@@ -99,10 +103,8 @@ class NavBar extends Component {
                     <ul className="uk-navbar-nav">
                         <li >
                             <div className="uk-light">
-                                <Link to="/">
-                                    <a className="uk-logo" href="#">
-                                        <img src={logo} width="180" height="50" alt="" data-uk-svg />
-                                    </a>
+                                <Link className="uk-logo" to="/">
+                                    <img src={logo} width="180" height="50" alt="" data-uk-svg />
                                 </Link>
                             </div>
                         </li>

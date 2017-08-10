@@ -11,7 +11,7 @@ class Home extends Component {
         return (
             <div className="uk-child-width-1-1@s uk-light" data-uk-grid>
                 <div className="uk-section uk-section-muted uk-margin-remove uk-padding-remove">
-                    <div className="uk-background-cover" style={{ 'background-image': 'url(' + img1 + ')' }} data-uk-height-viewport="offset-bottom: 30">
+                    <div className="uk-background-cover" style={{ 'backgroundImage': 'url(' + img1 + ')' }} data-uk-height-viewport="offset-bottom: 30">
                     </div>
                 </div>
                 {/*<nav className="uk-navbar-container uk-margin-remove" style={{ 'background-color': '#293a4b' }} data-uk-navbar data-uk-sticky>
@@ -103,49 +103,49 @@ class Home extends Component {
                     <div className="uk-text-center uk-grid-collapse" data-uk-grid>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-4@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img2 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img2 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-4@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img2 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img2 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-medium uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>
@@ -155,49 +155,49 @@ class Home extends Component {
                     <div className="uk-text-center uk-grid-collapse" data-uk-grid>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-4@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img2 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img2 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-4@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img2 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img2 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-6@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img4 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img4 + ')' }}>
                                 </div>
                             </div>
                         </div>
                         <div className="uk-width-1-2@s uk-width-1-3@m">
                             <div className="uk-tile uk-height-small uk-tile-primary uk-padding-remove">
-                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                                <div className="uk-background-cover uk-height-small uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                                 </div>
                             </div>
                         </div>

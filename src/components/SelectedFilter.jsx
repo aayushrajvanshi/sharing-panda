@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 class SelectedFilter extends Component {
     render() {
         var { filters } = this.props;
-        var listFilters = filters.map((el) => {
-            return <li>{el} <span></span></li>
+        var listFilters = filters.map((el, index) => {
+            return <li key={index} >{el} <span></span></li>
         })
         var clearList = filters.length === 0 ? null : (() => {
             return <li>CLEAR ALL</li>

@@ -10,7 +10,7 @@ class Sorter extends Component {
                         <option value="1">Popular</option>
                         <option value="2">Fund Raised</option>
                     </select>
-                    <button className="uk-button uk-button-default" type="button" tabindex="-1">
+                    <button className="uk-button uk-button-default" type="button" tabIndex="-1">
                         <span></span>
                         <span data-uk-icon="icon: chevron-down"></span>
                     </button>

@@ -6,7 +6,7 @@ var Fundraiser = (props) => {
     return (
         <div className="campaign-card">
             <div className="card-image">
-                <div className="uk-background-cover uk-height-medium" style={{ 'background-image': 'url(' + img1 + ')' }}>
+                <div className="uk-background-cover uk-height-medium" style={{ 'backgroundImage': 'url(' + img1 + ')' }}>
                 </div>
                 <div className="category">
                     <span>{type}</span>
@@ -48,7 +48,6 @@ var Fundraiser = (props) => {
                     <span>{days_left}</span>
                     <p>days left</p>
                 </div>
-
             </div>
         </div >
     );
