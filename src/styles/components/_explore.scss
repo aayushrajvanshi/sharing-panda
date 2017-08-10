@@ -1,0 +1,75 @@
+.side-filter p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #1d1e30;
+}
+
+.side-filter label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #1d1e30;
+}
+
+.side-filter label > input {
+  outline: none;
+}
+
+// .side-filter label > input ~ span {
+//   border: 1px solid #1d1e30;
+//   display: inline-block;
+//   margin-right: 10px;
+//   width: 12px;
+//   height: 12px;
+// }
+
+.trend-filter li {
+  list-style: none;
+  display: inline-block;
+}
+.trend-filter li:before {
+  content: '';
+  margin-right: 1rem;
+}
+
+.selected-filter{
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+
+.selected-filter li{
+  list-style: none;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  padding: 2px 10px 2px 15px;
+  border-radius: 50px;
+  background-color: #1d1e30;
+  color: white;
+  cursor: default;
+}
+
+.selected-filter li:last-child {
+  list-style: none;
+  display: inline-block;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0px;
+  background-color: white;
+  color: #1d1e30;
+  cursor: pointer
+}
+
+.selected-filter li > span {
+    margin-left: 5px;
+}
+
+.selected-filter li > span:before {
+    font-family: FontAwesome;
+    content:"\f00d";
+    color: white;
+    cursor: pointer
+}

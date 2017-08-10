@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import * as Redux from 'react-redux';
 import { Link } from 'react-router-dom';
-import * as actions from './../actions/actions.jsx';
-import ui from './../firebase/index.js';
+import * as actions from './../actions/actions.js';
 
 export class Login extends Component {
     constructor(props) {

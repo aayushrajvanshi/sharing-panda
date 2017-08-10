@@ -1,4 +1,4 @@
-import firebase, { database, googleProvider, facebookProvider } from './../firebase/';
+// import firebase, { database, googleProvider, facebookProvider } from './../firebase/';
 
 export var startLocationFetch = () => {
     return {
@@ -101,36 +101,6 @@ export var startAddUser = (first_name, last_name) => {
     };
 };
 
-export var addFundraiser = (fundraiser) => {
-    return {
-        type: 'ADD_FUNDRAISER',
-        fundraiser
-    };
-};
-
-export var startAddFundraiser = (title, type, campaigner, description, days_left, goal_amount, supporters) => {
-    return (dispatch, getState) => {
-        var fundraiser = {
-            title,
-            type,
-            campaigner,
-            description,
-            days_left,
-            goal_amount,
-            supporters
-        };
-
-        var fundraiserRef = database.child('fundraisers').push(fundraiser);
-
-        return fundraiserRef.then(() => {
-            dispatch(addFundraiser({
-                id: fundraiserRef.key,
-                ...fundraiser
-            }));
-        });
-    };
-};
-
 
 export var addFundraisers = (fundraisers) => {
     return {
@@ -157,3 +127,10 @@ export var startAddFundraisers = () => {
 
     };
 }
+
+export var addFilter = (filter) => {
+    return {
+        type: 'ADD_FILTER',
+        filter
+    };
+};

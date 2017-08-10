@@ -48,33 +48,39 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.scss$/,
-                use: cssConfig
-            },
-            {
-                test: /\.(js|jsx)$/,
-                use: [{
-                    loader: 'babel-loader'
-                }],
-                exclude: /node_modules/
-            },
-            {
-                test: /\.(jpe?g|png|gif)$/i,
-                use: [{
-                        loader: 'file-loader?hash=sha512&digest=hex&name=./images/[hash:9].[ext]'
-                    },
-                    {
-                        loader: 'image-webpack-loader?bypassOnDebug=false'
-                    }
-                ]
-            },
-            {
-                test: /\.(woff|ttf|eot|woff2|svg)$/i,
-                use: [{
-                    loader: 'file-loader?hash=sha512&digest=hex&name=./fonts/[name].[ext]'
-                }]
-            }
-        ]
+            test: /\.scss$/,
+            use: cssConfig
+        }, {
+            test: /\.(js|jsx)$/,
+            use: [{
+                loader: 'babel-loader'
+            }],
+            exclude: /node_modules/
+        }, {
+            test: /\.(jpe?g|png|gif)$/i,
+            use: [{
+                loader: 'file-loader?hash=sha512&digest=hex&name=./images/[hash:9].[ext]'
+            }, {
+                loader: 'image-webpack-loader?bypassOnDebug=false'
+            }]
+        }, {
+            test: /\.(woff|ttf|eot|woff2|svg)$/i,
+            use: [{
+                loader: 'file-loader?hash=sha512&digest=hex&name=./fonts/[name].[ext]'
+            }]
+        }]
+    },
+    resolve: {
+        alias: {
+            Actions: path.resolve(__dirname, 'src/actions/'),
+            Reducers: path.resolve(__dirname, 'src/reducers/'),
+            Constants: path.resolve(__dirname, 'src/constants/'),
+            Firebase: path.resolve(__dirname, 'src/firebase/'),
+            Images: path.resolve(__dirname, 'src/images/'),
+            Components: path.resolve(__dirname, 'src/components/'),
+            Containers: path.resolve(__dirname, 'src/containers/')
+        },
+        extensions: [".js", ".json", ".jsx"]
     },
     devtool: 'cheap-module-eval-source-map',
     devServer: {

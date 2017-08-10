@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as Redux from 'react-redux';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import * as actions from './../actions/actions.jsx';
+import * as actions from './../actions/actions.js';
 import logo from './../images/sharing-panda-logo.svg';
 import Login from './Login.jsx';
 

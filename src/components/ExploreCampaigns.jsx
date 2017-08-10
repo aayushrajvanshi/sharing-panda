@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import * as Redux from 'react-redux';
 import { NavLink } from 'react-router-dom'
-import * as actions from './../actions/actions.jsx';
+import * as actions from './../actions/actions.js';
 import CampaignCard from './CampaignCardCopy.jsx';
+import Categories from './fundraisers/Categories.jsx';
 
 export class ExploreCampaigns extends Component {
 
@@ -24,6 +25,7 @@ export class ExploreCampaigns extends Component {
                 </div>
             </div>
         );
+
     }
 }
 

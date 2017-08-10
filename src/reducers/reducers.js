@@ -59,19 +59,6 @@ export var userReducer = (state = [], action) => {
     }
 };
 
-export var fundraiserReducer = (state = [], action) => {
-    switch (action.type) {
-        case 'ADD_FUNDRAISER':
-            return [
-                ...state,
-                action.fundraiser
-            ];
-        case 'ADD_FUNDRAISERS':
-            return action.fundraisers;
-        default:
-            return state;
-    }
-};
 export var authReducer = (state = {}, action) => {
     switch (action.type) {
         case 'LOGIN':
@@ -86,3 +73,35 @@ export var authReducer = (state = {}, action) => {
             return state;
     }
 }
+
+const initialState = {
+    selectedFilters: {
+        type: [],
+        category: [],
+        trend: '',
+        search: ''
+    },
+    fundraisers: []
+};
+
+export var fundraiserReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'ADD_FUNDRAISER':
+            return {
+                ...state,
+                fundraisers: [...state.fundraisers, action.fundraiser]
+            };
+        case 'ADD_FUNDRAISERS':
+            return {
+                fundraisers: action.fundraisers
+            };
+        case 'ADD_FILTER':
+            return {
+                ...state,
+                selectedFilters: [...action.filter]
+            };
+        default:
+            return state;
+    }
+};
+

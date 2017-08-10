@@ -44,7 +44,7 @@ class Footer extends Component {
                             <div className="footer-list uk-width-1-5@m">
                                 <p>About Us</p>
                                 <ul className="other-list">
-                                    <li> <a href="#">Team Sharing Panda</a></li>
+                                    <li><NavLink to="/team-sharing-panda">Team Sharing Panda</NavLink></li>
                                     <li> <a href="#">Our Partners</a></li>
                                     <li> <a href="#">Careers</a></li>
                                     <li> <a href="#">Press Club</a></li>
