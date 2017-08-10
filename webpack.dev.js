@@ -71,6 +71,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Sharing Panda | India\'s Crowd Funding Website',
+            favicon: 'favicon.png',
             filename: 'index.html',
             hash: false,
             template: 'src/index.html',
