@@ -1,4 +1,15 @@
-// import firebase, { database, googleProvider, facebookProvider } from './../firebase/';
+import {
+    ADD_TODO,
+    SET_SEARCH_TEXT,
+    TOGGLE_SELECTED_TYPE,
+    TOGGLE_SELECTED_CATEGORY,
+    TOGGLE_FILTER,
+    SET_SORTING,
+    REMOVE_FILTER,
+    REMOVE_ALL_FILTERS
+} from 'Constants/actionTypes';
+
+import firebase, { database, googleProvider, facebookProvider } from 'Firebase/index.js';
 
 export var startLocationFetch = () => {
     return {
@@ -128,9 +139,53 @@ export var startAddFundraisers = () => {
     };
 }
 
-export var addFilter = (filter) => {
+
+export function setSearchText(search) {
     return {
-        type: 'ADD_FILTER',
+        type: SET_SEARCH_TEXT,
+        search
+    }
+}
+
+export function toggleSelectedType(text) {
+    return {
+        type: TOGGLE_SELECTED_TYPE,
+        text
+    }
+}
+
+export function toggleSelectedCategory(category) {
+    return {
+        type: TOGGLE_SELECTED_CATEGORY,
+        category
+    }
+}
+
+export function toggleFilter(filter) {
+    return {
+        type: TOGGLE_FILTER,
         filter
-    };
-};
+    }
+}
+
+
+export function setSorting(sorting) {
+    return {
+        type: SET_SORTING,
+        sorting
+    }
+}
+
+
+export function removeFilter(filter) {
+    return {
+        type: REMOVE_FILTER,
+        filter
+    }
+}
+
+export function removeAllFilters() {
+    return {
+        type: REMOVE_ALL_FILTERS
+    }
+}

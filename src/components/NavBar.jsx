@@ -89,13 +89,13 @@ class NavBar extends Component {
                 <div className="uk-navbar-center uk-visible@m">
                     <ul className="uk-navbar-nav">
                         <li><NavLink activeStyle={{
-                            color: 'red'
+                            color: '#1d1e30'
                         }} to="/explore-campaigns">Explore Fundraisers</NavLink></li>
                         <li><NavLink activeStyle={{
-                            color: 'red'
+                            color: '#1d1e30'
                         }} to="/start-campaign">Start Your Fundraisers</NavLink></li>
                         <li><NavLink activeStyle={{
-                            color: 'red'
+                            color: '#1d1e30'
                         }} to="/how-it-works">How it Works</NavLink></li>
                     </ul>
                 </div>
@@ -112,9 +112,7 @@ class NavBar extends Component {
                 </div>
                 <div className="uk-navbar-right uk-margin-right uk-visible@m">
                     <ul className="uk-navbar-nav">
-                        <li>
-                            {buttons()}
-                        </li>
+                        {buttons()}
                     </ul>
                 </div>
                 <div className="uk-navbar-right uk-margin-right uk-hidden@m">

@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 
 class CampaignDetail extends Component {
     render() {
+        var { title, campaigner, description } = this.props.fundraiser;
         return (
-            <div className="uk-section" style={{ 'background-color': '#ddd' }}>
+            <div className="uk-section" style={{ 'backgroundColor': '#ddd' }}>
                 <div className="uk-container">
-                    <h2 className="uk-heading-bullet">Aliqua mollit consequat duis nulla voluptate eiusmod dolor minim.</h2>
-                    <h6> by Rerson</h6>
+                    <h2 className="uk-heading-bullet">{title}</h2>
+                    <h6> by {campaigner}</h6>
                     <div className="uk-grid-small uk-text-center uk-grid-match" data-uk-grid>
                         <div className="uk-width-2-3@m">
                             <div className="uk-tile uk-tile-default">
-                                <div className="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'background-image': 'url(https://unsplash.it/500/600)' }}>
+                                <div className="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(https://unsplash.it/500/600)' }}>
                                     <p className="uk-h4">Cover</p>
                                 </div>
                             </div>
@@ -32,22 +33,12 @@ class CampaignDetail extends Component {
                                 </ul>
 
                                 <ul className="uk-switcher uk-margin">
-                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </li>
+                                    <li>{description}</li>
                                     <li>
                                         <img className="uk-border-circle" src="https://unsplash.it/80" width="200" height="200" alt="Border circle" />
                                     </li>
                                     <li>
-                                        <div className="uk-child-width-1-1@s uk-grid-collapse uk-text-center" uk-grid>
+                                        <div className="uk-child-width-1-1@s uk-grid-collapse uk-text-center" data-uk-grid>
                                             <div>
                                                 <div className="uk-tile uk-tile-primary">
                                                     <p className="uk-h4">In qui cillum ex dolor in ea elit dolor amet proident adipisicing incididunt occaecat et. Qui veniam cillum in laborum fugiat adipisicing nisi. Exercitation ex culpa pariatur nisi occaecat aliquip dolor excepteur ipsum.</p>

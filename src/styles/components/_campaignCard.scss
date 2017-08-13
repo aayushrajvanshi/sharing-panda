@@ -6,6 +6,7 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    max-height: 400px;
 }
 
 .campaign-card hr {
@@ -19,7 +20,7 @@
 
 .card-image {
     width: 100%;
-    height: 250px;
+    height: 150px;
     display: block;
     margin: 0px 0 10px 0;
     position: relative;

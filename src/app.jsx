@@ -28,16 +28,18 @@ import CampaignDetail from 'Components/CampaignDetail';
 import Team from 'Components/Team';
 
 //Containers
-import ExploreCampaigns from 'Containers/ExploreContainer';
-// firebase.auth().onAuthStateChanged(function (user) {
-//     if (user) {
-//         store.dispatch(actions.login(user.uid, user.displayName, user.photoURL));
-//         browserHistory.push('/');
-//     } else {
-//         store.dispatch(actions.logout());
-//         browserHistory.push('/');
-//     }
-// });
+import FundraiserContainer from 'Containers/FundraiserContainer';
+import FundraiserDetailContainer from 'Containers/FundraiserDetailContainer';
+
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        store.dispatch(actions.login(user.uid, user.displayName, user.photoURL));
+        browserHistory.push('/');
+    } else {
+        store.dispatch(actions.logout());
+        browserHistory.push('/');
+    }
+});
 
 ReactDOM.render(
     <Provider store={store}>
@@ -48,9 +50,10 @@ ReactDOM.render(
                     <Route exact path="/" component={Home} />
                     <Route path="/login" component={Login} />
                     <Route path="/profile" component={UserProfile} />
-                    <Route path="/explore-campaigns" component={ExploreCampaigns} />
+                    <Route path="/explore-campaigns" component={FundraiserContainer} />
                     <Route path="/start-campaign" component={StartCampaign} />
                     <Route path="/how-it-works" component={HowItWorks} />
+                    <Route path="/fundraiser/:id" component={FundraiserDetailContainer} />
                     <Route path="/faq" component={FAQ} />
                     <Route path="/fundraising-tips" component={FundraisingTips} />
                     <Route path="/campaign-detail" component={CampaignDetail} />
