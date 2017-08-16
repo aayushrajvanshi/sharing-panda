@@ -4,26 +4,31 @@ class CampaignDetail extends Component {
     render() {
         var { title, campaigner, description } = this.props.fundraiser;
         return (
-            <div className="uk-section" style={{ 'backgroundColor': '#ddd' }}>
+            <div className="uk-section uk-section-muted" >
                 <div className="uk-container">
-                    <h2 className="uk-heading-bullet">{title}</h2>
-                    <h6> by {campaigner}</h6>
+                    <h3 className="uk-margin-small">{title}</h3>
+                    <h6 className="uk-margin-small"> by {campaigner}</h6>
                     <div className="uk-grid-small uk-text-center uk-grid-match" data-uk-grid>
                         <div className="uk-width-2-3@m">
-                            <div className="uk-tile uk-tile-default">
+                            <div className="uk-tile uk-tile-default uk-visible@m">
                                 <div className="uk-background-cover uk-height-large uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(https://unsplash.it/500/600)' }}>
                                     <p className="uk-h4">Cover</p>
                                 </div>
                             </div>
+                            <div className="uk-tile uk-tile-default uk-padding-remove uk-hidden@m">
+                                <div className="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style={{ 'backgroundImage': 'url(https://unsplash.it/500/600)' }}>
+                                    <p className="uk-h4">Cover</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="uk-width-1-3@m">
+                        <div className="uk-width-1-3@m uk-visible@m">
                             <div className="uk-tile uk-tile-default ">
                                 <button className="uk-button uk-button-primary uk-width-1-1">Contribute Now</button>
                             </div>
                         </div>
                     </div>
-                    <div className="uk-grid-small uk-grid-match" data-uk-grid>
-                        <div className="uk-width-2-3@m">
+                    <div className="uk-grid-small uk-grid-match " data-uk-grid>
+                        <div className="uk-width-2-3@m uk-visible@m">
                             <div className="uk-tile uk-tile-default">
                                 <ul data-uk-tab data-uk-switcher="animation: uk-animation-fade">
                                     <li><a href="#">Story</a></li>
@@ -167,91 +172,98 @@ class CampaignDetail extends Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className="uk-width-1-3@m">
-                            <div className="uk-tile uk-tile-default ">
-                                <ul className="uk-comment-list">
-                                    <li>
-                                        <article className="uk-comment uk-visible-toggle">
-                                            <header className="uk-comment-header uk-position-relative">
-                                                <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
-                                                    <div className="uk-width-auto">
-                                                        <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
-                                                    </div>
-                                                    <div className="uk-width-expand">
-                                                        <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                                                        <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
-                                                    </div>
-                                                </div>
-                                                <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
-                                            </header>
-                                            <div className="uk-comment-body">
-                                                <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
-                                            </div>
-                                        </article>
-                                    </li>
-                                    <li>
-                                        <article className="uk-comment uk-visible-toggle">
-                                            <header className="uk-comment-header uk-position-relative">
-                                                <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
-                                                    <div className="uk-width-auto">
-                                                        <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
-                                                    </div>
-                                                    <div className="uk-width-expand">
-                                                        <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                                                        <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
-                                                    </div>
-                                                </div>
-                                                <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
-                                            </header>
-                                            <div className="uk-comment-body">
-                                                <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
-                                            </div>
-                                        </article>
-                                    </li>
-                                    <li>
-                                        <article className="uk-comment uk-visible-toggle">
-                                            <header className="uk-comment-header uk-position-relative">
-                                                <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
-                                                    <div className="uk-width-auto">
-                                                        <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
-                                                    </div>
-                                                    <div className="uk-width-expand">
-                                                        <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                                                        <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
-                                                    </div>
-                                                </div>
-                                                <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
-                                            </header>
-                                            <div className="uk-comment-body">
-                                                <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
-                                            </div>
-                                        </article>
-                                    </li>
-                                    <li>
-                                        <article className="uk-comment uk-visible-toggle">
-                                            <header className="uk-comment-header uk-position-relative">
-                                                <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
-                                                    <div className="uk-width-auto">
-                                                        <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
-                                                    </div>
-                                                    <div className="uk-width-expand">
-                                                        <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
-                                                        <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
-                                                    </div>
-                                                </div>
-                                                <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
-                                            </header>
-                                            <div className="uk-comment-body">
-                                                <p>Lorem ipsum dolor sit Occaecat velit fugiat esse esse adipisicing do exercitation ad. amet.</p>
-                                            </div>
-                                        </article>
-                                    </li>
-                                </ul>
+                        <div className="uk-width-2-3@m uk-hidden@m">
+                            <div className="uk-tile uk-tile-default uk-padding-small">
+                                <li>{description}</li>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+
+
+                    <div className="uk-width-1-3@m uk-visible@m">
+                        <div className="uk-tile uk-tile-default ">
+                            <ul className="uk-comment-list">
+                                <li>
+                                    <article className="uk-comment uk-visible-toggle">
+                                        <header className="uk-comment-header uk-position-relative">
+                                            <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
+                                                <div className="uk-width-auto">
+                                                    <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
+                                                </div>
+                                                <div className="uk-width-expand">
+                                                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
+                                                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div className="uk-comment-body">
+                                            <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article className="uk-comment uk-visible-toggle">
+                                        <header className="uk-comment-header uk-position-relative">
+                                            <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
+                                                <div className="uk-width-auto">
+                                                    <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
+                                                </div>
+                                                <div className="uk-width-expand">
+                                                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
+                                                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div className="uk-comment-body">
+                                            <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article className="uk-comment uk-visible-toggle">
+                                        <header className="uk-comment-header uk-position-relative">
+                                            <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
+                                                <div className="uk-width-auto">
+                                                    <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
+                                                </div>
+                                                <div className="uk-width-expand">
+                                                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
+                                                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div className="uk-comment-body">
+                                            <p>Lorem ipsum dolor sit amet. Eiusmod et magna quis amet est deserunt dolore ea occaecat.</p>
+                                        </div>
+                                    </article>
+                                </li>
+                                <li>
+                                    <article className="uk-comment uk-visible-toggle">
+                                        <header className="uk-comment-header uk-position-relative">
+                                            <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
+                                                <div className="uk-width-auto">
+                                                    <img className="uk-comment-avatar" src="https://unsplash.it/80" width="80" height="80" alt="" />
+                                                </div>
+                                                <div className="uk-width-expand">
+                                                    <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">Author</a></h4>
+                                                    <p className="uk-comment-meta uk-margin-remove-top"><a className="uk-link-reset" href="#">12 days ago</a></p>
+                                                </div>
+                                            </div>
+                                            <div className="uk-position-top-right uk-position-small uk-hidden-hover"><a className="uk-link-muted" href="#">Reply</a></div>
+                                        </header>
+                                        <div className="uk-comment-body">
+                                            <p>Lorem ipsum dolor sit Occaecat velit fugiat esse esse adipisicing do exercitation ad. amet.</p>
+                                        </div>
+                                    </article>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div >
+            </div >
         );
     }
 }

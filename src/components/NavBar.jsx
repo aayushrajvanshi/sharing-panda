@@ -5,16 +5,21 @@ import { NavLink } from 'react-router-dom';
 import * as actions from './../actions/actions.js';
 import logo from './../images/sharing-panda-logo.svg';
 import Login from './Login.jsx';
+import UIkit from 'uikit';
 
 class NavBar extends Component {
     constructor(props) {
         super(props);
-        this.onLogout = this.onLogout.bind(this);
     }
-    onLogout() {
+    onLogout = () => {
         var { dispatch } = this.props;
         dispatch(actions.startLogout());
     }
+    handleSideBar = () => {
+        $('html').removeClass();
+        UIkit.offcanvas($("#side-nav-bar")).hide()
+    }
+
     render() {
         var buttons = () => {
             if (!this.props.auth.uid) {
@@ -54,10 +59,10 @@ class NavBar extends Component {
                     <div className="uk-clearfix">
                         <div className="uk-grid-small uk-flex-inline">
                             <div className="uk-float-left">
-                                <a data-uk-toggle="target: #login-modal">Log In</a>
+                                <a onClick={this.handleSideBar} data-uk-toggle="target: #login-modal">Log In</a>
                             </div>
                             <div className="uk-float-right">
-                                <a data-uk-toggle="target: #signup-modal">Sign Up</a>
+                                <a onClick={this.handleSideBar} data-uk-toggle="target: #signup-modal">Sign Up</a>
                             </div>
                         </div>
                     </div>
@@ -65,12 +70,16 @@ class NavBar extends Component {
             } else return (
                 <div>
                     <div>
-                        <p className="user-greeting uk-margin-small-bottom">Hi, {this.props.auth.display_name}</p>
+                        <div>
+                            <p className="user-greeting uk-margin-small-bottom">Hi, {this.props.auth.display_name}</p>
+                        </div>
+                        <div className="user-icon uk-margin-small-bottom" style={{ 'width': '80px', 'height': '80px' }}>
+                            <img src={this.props.auth.photo_url} alt="" />
+                        </div>
                     </div>
-                    <div className="user-icon uk-margin-small-bottom" style={{ 'width': '80px', 'height': '80px' }}>
-                        <img src={this.props.auth.photo_url} alt="" />
-                    </div>
+                    <button className="uk-button uk-button-primary" onClick={(e) => { this.onLogout(); this.handleSideBar() }}>Log Out</button>
                 </div>
+
             );
         }
         return (
@@ -128,9 +137,9 @@ class NavBar extends Component {
                     <div className="uk-offcanvas-bar uk-background-primary uk-flex uk-flex-column uk-text-center">
                         <button className="uk-offcanvas-close uk-close-large" type="button" data-uk-close></button>
                         <ul className="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical" data-uk-nav>
-                            <li><NavLink activeClassName="uk-active" to="/explore-campaigns">Explore Fundraisers</NavLink></li>
-                            <li><NavLink activeClassName="uk-active" to="/start-campaign">Start Your Fundraisers</NavLink></li>
-                            <li><NavLink activeClassName="uk-active" to="/how-it-works">How it Works</NavLink></li>
+                            <li onClick={this.handleSideBar}><NavLink activeClassName="uk-active" to="/explore-campaigns">Explore Fundraisers</NavLink></li>
+                            <li onClick={this.handleSideBar}><NavLink activeClassName="uk-active" to="/start-campaign">Start Your Fundraisers</NavLink></li>
+                            <li onClick={this.handleSideBar}><NavLink activeClassName="uk-active" to="/how-it-works">How it Works</NavLink></li>
                         </ul>
                         {sideButtons()}
                         <div className="uk-margin-top">
@@ -160,7 +169,7 @@ class NavBar extends Component {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav >
         );
     };
 }

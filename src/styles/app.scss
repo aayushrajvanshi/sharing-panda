@@ -11,3 +11,9 @@
 @import "./components/loginForm";
 @import "./components/explore";
 @import "./components/_fundraiserContainer";
+@import "./components/_modal";
+
+.uk-offcanvas{
+    z-index: 99999;
+    display: inline-block!important;
+}

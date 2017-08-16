@@ -13,7 +13,7 @@ class SortContainer extends Component {
             return <option key={sort.value} value={sort.value}>{sort.id}</option>
         });
         return (
-            <div className="uk-flex" style={{ 'justifySelf': 'end' }}>
+            <div>
                 <label><span className="uk-visible@m">Sort By: </span><select className="uk-select uk-form-width-medium" value={this.props.selectedSorting} onChange={e => this.onSortingChange(e)}>
                     {nodes}
                 </select>

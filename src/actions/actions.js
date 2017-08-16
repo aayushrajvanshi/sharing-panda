@@ -6,8 +6,12 @@ import {
     TOGGLE_FILTER,
     SET_SORTING,
     REMOVE_FILTER,
-    REMOVE_ALL_FILTERS
+    REMOVE_ALL_FILTERS,
+    TOGGLE_LOGIN_MODAL,
+    TOGGLE_SIGNUP_MODAL
 } from 'Constants/actionTypes';
+
+import UIkit from 'uikit';
 
 import firebase, { database, googleProvider, facebookProvider } from 'Firebase/index.js';
 
@@ -23,6 +27,7 @@ export var completeLocationFetch = (url) => {
         url
     };
 };
+
 
 export var fetchLocation = () => {
     return (dispatch, getState) => {
@@ -47,8 +52,10 @@ export var login = (uid, display_name, photo_url) => {
 export var startGoogleLogin = () => {
     return (dispatch, getState) => {
         firebase.auth().signInWithPopup(googleProvider).then((result) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Auth worked', result);
         }, (error) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Unable to auth', error);
         });
     };
@@ -57,8 +64,10 @@ export var startGoogleLogin = () => {
 export var startFacebookLogin = () => {
     return (dispatch, getState) => {
         firebase.auth().signInWithPopup(facebookProvider).then((result) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Auth worked', result);
         }, (error) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Unable to auth', error);
         });
     };
@@ -67,8 +76,10 @@ export var startFacebookLogin = () => {
 export var startEmailLogin = (email, password) => {
     return (dispatch, getState) => {
         firebase.auth().signInWithEmailAndPassword(email, password).then((result) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Auth worked', result);
         }, (error) => {
+            UIkit.modal($("#login-modal")).hide();
             console.log('Unable to auth', error);
         });
     };
@@ -189,3 +200,4 @@ export function removeAllFilters() {
         type: REMOVE_ALL_FILTERS
     }
 }
+

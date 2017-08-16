@@ -254,6 +254,175 @@ const fundraisers = [{
     "type": "Individual",
     "category": "Medical",
     "days_left": 34
+}, {
+    "id": "12",
+    "campaigner": "user1",
+    "description": "Dolor aliquip irure aute ut ullamco fugiat sunt eu nisi.",
+    "donations": {
+        "donation1": true,
+        "donation3": true
+    },
+    "end_date": 1501353000000,
+    "fund_raised": 5100,
+    "goal_amount": 600000,
+    "no_of_donations": 2,
+    "supporters": "212",
+    "title": "Ea reprehenderit aliquip est qui quis ad sint et ut ut laboris consequat ex pariatur.",
+    "type": "Individual",
+    "category": "Animal",
+    "days_left": 23
+}, {
+    "id": "13",
+    "campaigner": "user1",
+    "description": "Dolor aliquip irure aute ut ullamco fugiat sunt eu nisi.",
+    "donations": {
+        "donation1": true,
+        "donation3": true
+    },
+    "end_date": 1501353000000,
+    "fund_raised": 5100,
+    "goal_amount": 600000,
+    "no_of_donations": 2,
+    "supporters": "212",
+    "title": "Ea reprehenderit aliquip est qui quis ad sint et ut ut laboris consequat ex pariatur.",
+    "type": "Individual",
+    "category": "Animal",
+    "days_left": 34
+}, {
+    "id": "14",
+    "campaigner": "user1",
+    "description": "Cupidatat culpa consequat culpa ad consectetur labore labore minim excepteur incididunt veniam eu ea.",
+    "donations": {
+        "donation2": true,
+        "donation4": true
+    },
+    "end_date": 1504031400000,
+    "fund_raised": 1100,
+    "goal_amount": 400000,
+    "no_of_donations": 2,
+    "supporters": "202",
+    "title": "Officia laborum velit amet do pariatur magna cillum Lorem.",
+    "type": "Charity/NGO",
+    "category": "Animal",
+    "days_left": 54
+}, {
+    "id": "15",
+    "campaigner": "user2",
+    "description": "Enim do occaecat officia minim dolor ex laboris eu occaecat qui mollit et commodo sunt.",
+    "donations": {
+        "donation5": true
+    },
+    "end_date": 1502735400000,
+    "fund_raised": 150,
+    "goal_amount": 700000,
+    "no_of_donations": 1,
+    "supporters": "432",
+    "title": "Aliquip eiusmod dolore aute dolor velit.",
+    "type": "Individual",
+    "category": "Children",
+    "days_left": 2
+}, {
+    "id": "16",
+    "campaigner": "user4",
+    "description": "Nisi incididunt labore sint duis in cupidatat ad.",
+    "end_date": 1501525800000,
+    "fund_raised": 0,
+    "goal_amount": 600000,
+    "no_of_donations": 0,
+    "supporters": "22",
+    "title": "Consequat qui consectetur laboris anim.",
+    "type": "Charity/NGO",
+    "category": "Children",
+    "days_left": 45
+}, {
+    "id": "17",
+    "campaigner": "user4",
+    "description": "Lorem ipsum sint ut cupidatat in do velit culpa sunt nulla ex.",
+    "end_date": 1501525800000,
+    "fund_raised": 0,
+    "goal_amount": 600000,
+    "no_of_donations": 0,
+    "supporters": "22",
+    "title": "Ipsum pariatur ut et do est magna qui proident deserunt excepteur dolor ex eiusmod.",
+    "type": "Individual",
+    "category": "Children",
+    "days_left": 25
+}, {
+    "id": "18",
+    "campaigner": "user1",
+    "description": "Sunt reprehenderit officia tempor officia dolor voluptate proident mollit officia consequat tempor enim ullamco.",
+    "donations": {
+        "donation1": true,
+        "donation3": true
+    },
+    "end_date": 1501353000000,
+    "fund_raised": 5100,
+    "goal_amount": 600000,
+    "no_of_donations": 2,
+    "supporters": "212",
+    "title": "Eiusmod culpa mollit ipsum mollit mollit irure quis.",
+    "type": "Individual",
+    "category": "Animal",
+    "days_left": 12
+}, {
+    "id": "19",
+    "campaigner": "user1",
+    "description": "Minim aliqua sit ex ipsum id qui aliquip amet aliqua sint.",
+    "donations": {
+        "donation2": true,
+        "donation4": true
+    },
+    "end_date": 1504031400000,
+    "fund_raised": 1100,
+    "goal_amount": 400000,
+    "no_of_donations": 2,
+    "supporters": "202",
+    "title": "Cillum nulla non ipsum cupidatat consectetur.",
+    "type": "Charity/NGO",
+    "category": "Human Rights",
+    "days_left": 89
+}, {
+    "id": "20",
+    "campaigner": "user2",
+    "description": "Incididunt deserunt elit tempor ipsum non.",
+    "donations": {
+        "donation5": true
+    },
+    "end_date": 1502735400000,
+    "fund_raised": 150,
+    "goal_amount": 700000,
+    "no_of_donations": 1,
+    "supporters": "432",
+    "title": "Commodo culpa labore veniam commodo qui est exercitation id nulla aliqua aute excepteur duis ex.",
+    "type": "Individual",
+    "category": "Education",
+    "days_left": 12
+}, {
+    "id": "21",
+    "campaigner": "user4",
+    "description": "Sint dolor id incididunt sunt mollit do mollit do ipsum amet tempor culpa.",
+    "end_date": 1501525800000,
+    "fund_raised": 0,
+    "goal_amount": 600000,
+    "no_of_donations": 0,
+    "supporters": "22",
+    "title": "Quis cillum mollit adipisicing eu pariatur.",
+    "type": "Charity/NGO",
+    "category": "Education",
+    "days_left": 56
+}, {
+    "id": "22",
+    "campaigner": "user4",
+    "description": "Voluptate adipisicing consequat dolore sit sint ullamco commodo aute in quis.",
+    "end_date": 1501525800000,
+    "fund_raised": 0,
+    "goal_amount": 600000,
+    "no_of_donations": 0,
+    "supporters": "22",
+    "title": "Est id adipisicing nostrud tempor quis occaecat ipsum elit dolore.",
+    "type": "Individual",
+    "category": "Medical",
+    "days_left": 34
 }];
 
 

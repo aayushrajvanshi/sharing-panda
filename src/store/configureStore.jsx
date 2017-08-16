@@ -21,6 +21,6 @@ export var configure = () => {
         autoRehydrate(),
         window.devToolsExtension ? window.devToolsExtension() : f => f
     ));
-    persistStore(store);    
+    persistStore(store);
     return store;
 };

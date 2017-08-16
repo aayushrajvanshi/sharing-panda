@@ -27,6 +27,8 @@ import ScrollToTop from 'Components/ScrollToTop';
 import CampaignDetail from 'Components/CampaignDetail';
 import Team from 'Components/Team';
 
+import SideDock from 'Components/SideDock';
+import TestModal from 'Components/TestModal';
 //Containers
 import FundraiserContainer from 'Containers/FundraiserContainer';
 import FundraiserDetailContainer from 'Containers/FundraiserDetailContainer';
